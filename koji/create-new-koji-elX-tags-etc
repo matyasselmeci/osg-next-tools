@@ -10,8 +10,8 @@ EL=el8
 ### new tags ###
 
 osg-koji add-tag --arches=x86_64 dist-$EL
-osg-koji add-tag --arches=x86_64 dist-$EL-build --extra=mock.yum.module_hotfixes=1
-osg-koji add-tag --arches=x86_64 osg-$SERIES-$EL-build --extra=mock.yum.module_hotfixes=1
+osg-koji add-tag --arches=x86_64 dist-$EL-build --extra=mock.yum.module_hotfixes=1 --extra=rebuild_srpm=False
+osg-koji add-tag --arches=x86_64 osg-$SERIES-$EL-build --extra=mock.yum.module_hotfixes=1 --extra=rebuild_srpm=False
 osg-koji add-tag --arches=x86_64 osg-$SERIES-$EL-contrib
 osg-koji add-tag --arches=x86_64 osg-$SERIES-$EL-development
 osg-koji add-tag --arches=x86_64 osg-$SERIES-$EL-empty
@@ -22,8 +22,8 @@ osg-koji add-tag --arches=x86_64 osg-$SERIES-$EL-rolling
 osg-koji add-tag --arches=x86_64 osg-$SERIES-$EL-testing
 osg-koji add-tag --arches=x86_64 osg-$EL
 osg-koji add-tag --arches=x86_64 osg-$EL-internal
-osg-koji add-tag --arches=x86_64 osg-$EL-internal-build --extra=mock.yum.module_hotfixes=1
-osg-koji add-tag --arches=x86_64 osg-upcoming-$EL-build --extra=mock.yum.module_hotfixes=1
+osg-koji add-tag --arches=x86_64 osg-$EL-internal-build --extra=mock.yum.module_hotfixes=1 --extra=rebuild_srpm=False
+osg-koji add-tag --arches=x86_64 osg-upcoming-$EL-build --extra=mock.yum.module_hotfixes=1 --extra=rebuild_srpm=False
 osg-koji add-tag --arches=x86_64 osg-upcoming-$EL-development
 osg-koji add-tag --arches=x86_64 osg-upcoming-$EL-prerelease
 osg-koji add-tag --arches=x86_64 osg-upcoming-$EL-release
@@ -31,7 +31,7 @@ osg-koji add-tag --arches=x86_64 osg-upcoming-$EL-rolling
 osg-koji add-tag --arches=x86_64 osg-upcoming-$EL-testing
 
 osg-koji add-tag --arches=x86_64 hcc-$EL
-osg-koji add-tag --arches=x86_64 hcc-$EL-build --extra=mock.yum.module_hotfixes=1
+osg-koji add-tag --arches=x86_64 hcc-$EL-build --extra=mock.yum.module_hotfixes=1 --extra=rebuild_srpm=False
 osg-koji add-tag --arches=x86_64 hcc-$EL-release
 osg-koji add-tag --arches=x86_64 hcc-$EL-testing
 

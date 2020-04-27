@@ -10,7 +10,7 @@ SERIES=3.3       # or upcoming
 ARCHES="x86_64"  # or "i386 x86_64"
 
 osg-koji add-tag --arches="$ARCHES" $NAME-$EL
-osg-koji add-tag --arches="$ARCHES" $NAME-$EL-build
+osg-koji add-tag --arches="$ARCHES" $NAME-$EL-build --extra=rebuild_srpm=False
 
 osg-koji add-tag-inheritance --priority=1 --noconfig $NAME-$EL       osg-$EL
 osg-koji add-tag-inheritance --priority=1            $NAME-$EL-build $NAME-$EL
