@@ -5,6 +5,8 @@ set -xeu
 
 SERIES=3.7
 
+build_tag_extras=(-x rebuild_srpm=False -x mock.yum.module_hotfixes=1)
+
 
 ask_yn () {
     echo -n "$@"
@@ -19,6 +21,7 @@ ask_yn () {
 }
 
 
+
 while [[ ! ${FEATURE-} ]]; do
     echo -n 'Enter feature name to use for tag (e.g. "xrootd5")> '
     read -r FEATURE
@@ -27,11 +30,6 @@ while [[ ! ${FEATURE-} ]]; do
     fi
 done
 
-
-
-
-
-build_tag_extras=(-x rebuild_srpm=False -x mock.yum.module_hotfixes=1)
 
 for EL in el8 el9; do
     PARENT_PREFIX=osg-$SERIES-main-$EL
